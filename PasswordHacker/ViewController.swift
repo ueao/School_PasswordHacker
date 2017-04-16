@@ -34,9 +34,10 @@ class ViewController: UIViewController {
 
     @IBAction func start(){
         for i in 0...9999 {
-            
+            //iってなんだ
             //解析中の数字を表示する
             countLabel.text = String(i)
+            
             
             //処理を0.0005秒、待機する
             RunLoop.main.run(until: Date(timeIntervalSinceNow: 0.0005))
@@ -46,6 +47,9 @@ class ViewController: UIViewController {
                 
                 //passwordのけたごとの数字を入れる配列
                 var digits = [Int]()
+                
+                
+                countLabel.text = String(password)
                 
                 for _ in 0...3 {
                     digits.append(password % 10) //j桁目の数字
@@ -59,6 +63,7 @@ class ViewController: UIViewController {
                 resultLabel4.text = String(digits[3])
                 
                 NSLog("正解は%dです", i)
+                
             }
             
     }
