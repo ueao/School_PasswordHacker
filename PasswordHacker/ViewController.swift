@@ -11,10 +11,10 @@ import UIKit
 class ViewController: UIViewController {
 
     //結果表示ラベル
-    @IBOutlet var resultLabel1 : UILabel!
-    @IBOutlet var resultLabel2 : UILabel!
-    @IBOutlet var resultLabel3 : UILabel!
-    @IBOutlet var resultLabel4 : UILabel!
+    @IBOutlet var resultLabel1 : UILabel!   //右から1番目
+    @IBOutlet var resultLabel2 : UILabel!   //右から2番目
+    @IBOutlet var resultLabel3 : UILabel!   //右から3番目
+    @IBOutlet var resultLabel4 : UILabel!   //右から4番目
     
     //カウント用ラベル
     @IBOutlet var countLabel : UILabel!
@@ -33,8 +33,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func start(){
+        //for 変数　in ループを続ける条件
         for i in 0...9999 {
-            //iってなんだ
+            //iのところはなんでもよい
             //解析中の数字を表示する
             countLabel.text = String(i)
             
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
                 resultLabel3.text = String(digits[2])
                 resultLabel4.text = String(digits[3])
                 
-                NSLog("正解は%dです", i)
+                print("正解は\(i)です")
                 
             }
             
